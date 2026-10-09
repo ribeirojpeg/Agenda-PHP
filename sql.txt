@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS agenda_contatos;
+USE agenda_contatos;
+
+CREATE TABLE contatos(
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20) NOT NULL,
+    favorito TINYINT(1) NOT NULL DEFAULT 0,
+    email VARCHAR(100),
+    data_de_cadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
